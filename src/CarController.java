@@ -46,6 +46,7 @@ public class CarController {
         cc.volvoRepairShop = new RepairShop<>(5, "VolvoRepair");
         cc.volvoRepairShop.setPosition(300.0, 0.0);
 
+
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
 
@@ -61,7 +62,7 @@ public class CarController {
             ArrayList<Volvo240> loaded_cars = new ArrayList<>();
             for (Car car : cars) {
                 car.move();
-
+                // edge collision
                 int x_border = frame.getPanelXBorder();
                 int y_border = frame.getPanelYBorder();
                 int width = 20;
@@ -87,6 +88,8 @@ public class CarController {
                 if(y0 + height > y_border || y0 < 0) {
                     car.setDirection(car.getDirection().getX(), -car.getDirection().getY());
                 }
+
+                //repairshop collision
 
                 if (car instanceof Volvo240) {
                     int workshopWidth = frame.drawPanel.volvoWorkshopImage.getWidth();
@@ -117,6 +120,7 @@ public class CarController {
                 //frame.drawPanel.moveit(x1, y1);
                // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
+
             }
             for(Car car: loaded_cars) {
                 cars.remove(car);
@@ -141,7 +145,7 @@ public class CarController {
         }
     }
 
-    void turbOn(){
+    void turboOn(){
         for (Car car: cars) {
             if (car instanceof Saab95) {
                 ((Saab95) car).setTurboOn();

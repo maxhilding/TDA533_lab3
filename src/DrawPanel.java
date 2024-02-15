@@ -26,7 +26,7 @@ public class DrawPanel extends JPanel{
 
     RepairShop<Volvo240> volvoWorkshop;
 
-    ArrayList<Car> cars = new ArrayList<>();
+    ArrayList<Car> cars;
 
 
     // TODO: Make this general for all cars

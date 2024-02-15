@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Answers/Answers.iml" filepath="$PROJECT_DIR$/Answers/Answers.iml" />
       <module fileurl="file://$PROJECT_DIR$/TDA533_lab3.iml" filepath="$PROJECT_DIR$/TDA533_lab3.iml" />
     </modules>
   </component>

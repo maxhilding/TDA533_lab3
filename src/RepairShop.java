@@ -39,7 +39,6 @@ public class RepairShop<T extends Car> implements Loadable<T>{
 
     @Override
     public T loadOff() {
-
         T car = loadedCars.pop();
         car.setIsDriveable(true);
         return car;
